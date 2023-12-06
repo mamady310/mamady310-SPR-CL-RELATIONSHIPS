@@ -30,11 +30,14 @@ public class Album {
     /**
      * Review the other model classes to see examples of annotations that link entities.
      */
+    // @OneToMany(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Artist artist;
 
     /**
      * Review the other model classes to see examples of annotations that link entities.
      */
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Song> songs;
 
     public Album(String title) {
